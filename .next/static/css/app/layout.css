@@ -517,7 +517,7 @@ video {
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: #e5e7eb;
   }
 
 body {
@@ -794,6 +794,18 @@ input[type="checkbox"]:checked ~ label span svg{
 .hidden{
   display: none;
 }
+.aspect-25\/24{
+  aspect-ratio: 25 / 24;
+}
+.aspect-37\/22{
+  aspect-ratio: 37 / 22;
+}
+.aspect-77\/40{
+  aspect-ratio: 77 / 40;
+}
+.aspect-97\/60{
+  aspect-ratio: 97 / 60;
+}
 .h-0\.5{
   height: 0.125rem;
 }
@@ -1024,6 +1036,9 @@ input[type="checkbox"]:checked ~ label span svg{
 .rounded-sm{
   border-radius: 0.125rem;
 }
+.rounded-xs{
+  border-radius: 4px;
+}
 .border{
   border-width: 1px;
 }
@@ -1048,6 +1063,29 @@ input[type="checkbox"]:checked ~ label span svg{
 .border-t-2{
   border-top-width: 2px;
 }
+.border-body-color{
+  --tw-border-opacity: 1;
+  border-color: rgb(120 130 147 / var(--tw-border-opacity, 1));
+}
+.border-body-color\/10{
+  border-color: rgb(120 130 147 / 0.1);
+}
+.border-body-color\/20{
+  border-color: rgb(120 130 147 / 0.2);
+}
+.border-body-color\/25{
+  border-color: rgb(120 130 147 / 0.25);
+}
+.border-body-color\/50{
+  border-color: rgb(120 130 147 / 0.5);
+}
+.border-body-color\/\[\.15\]{
+  border-color: rgb(120 130 147 / .15);
+}
+.border-stroke{
+  --tw-border-opacity: 1;
+  border-color: rgb(227 232 239 / var(--tw-border-opacity, 1));
+}
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1066,14 +1104,34 @@ input[type="checkbox"]:checked ~ label span svg{
 }
 .bg-black{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  background-color: rgb(18 23 35 / var(--tw-bg-opacity, 1));
 }
 .bg-black\/60{
-  background-color: rgb(0 0 0 / 0.6);
+  background-color: rgb(18 23 35 / 0.6);
+}
+.bg-body-color\/15{
+  background-color: rgb(120 130 147 / 0.15);
+}
+.bg-body-color\/50{
+  background-color: rgb(120 130 147 / 0.5);
 }
 .bg-gray-900{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+.bg-gray-light{
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 242 249 / var(--tw-bg-opacity, 1));
+}
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 108 247 / var(--tw-bg-opacity, 1));
+}
+.bg-primary\/10{
+  background-color: rgb(74 108 247 / 0.1);
+}
+.bg-primary\/80{
+  background-color: rgb(74 108 247 / 0.8);
 }
 .bg-transparent{
   background-color: transparent;
@@ -1335,11 +1393,27 @@ input[type="checkbox"]:checked ~ label span svg{
 }
 .text-black{
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  color: rgb(18 23 35 / var(--tw-text-opacity, 1));
+}
+.text-body-color{
+  --tw-text-opacity: 1;
+  color: rgb(120 130 147 / var(--tw-text-opacity, 1));
+}
+.text-dark{
+  --tw-text-opacity: 1;
+  color: rgb(29 36 48 / var(--tw-text-opacity, 1));
+}
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(74 108 247 / var(--tw-text-opacity, 1));
 }
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.text-yellow{
+  --tw-text-opacity: 1;
+  color: rgb(251 176 64 / var(--tw-text-opacity, 1));
 }
 .underline{
   text-decoration-line: underline;
@@ -1356,6 +1430,11 @@ input[type="checkbox"]:checked ~ label span svg{
 .opacity-70{
   opacity: 0.7;
 }
+.shadow-btn{
+  --tw-shadow: 0px 1px 2px rgba(4, 10, 34, 0.15);
+  --tw-shadow-colored: 0px 1px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-inner{
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
@@ -1365,6 +1444,39 @@ input[type="checkbox"]:checked ~ label span svg{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-one{
+  --tw-shadow: 0px 2px 3px rgba(7, 7, 77, 0.05);
+  --tw-shadow-colored: 0px 2px 3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-sticky{
+  --tw-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: inset 0 -1px 0 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-submit{
+  --tw-shadow: 0px 5px 20px rgba(4, 10, 34, 0.1);
+  --tw-shadow-colored: 0px 5px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-three{
+  --tw-shadow: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --tw-shadow-colored: 0px 5px 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-two{
+  --tw-shadow: 0px 5px 10px rgba(6, 8, 15, 0.1);
+  --tw-shadow-colored: 0px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.ring-primary{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(74 108 247 / var(--tw-ring-opacity, 1));
+}
+.drop-shadow-three{
+  --tw-drop-shadow: drop-shadow(0px 5px 15px rgba(6, 8, 15, 0.05));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1392,66 +1504,26 @@ input[type="checkbox"]:checked ~ label span svg{
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-  --breakpoint-*: initial;
-  --breakpoint-xs: 450px;
-  --breakpoint-sm: 575px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-2xl: 1400px;
-
-  --color-current: currentColor;
-  --color-transparent: transparent;
-  --color-white: #ffffff;
-  --color-black: #121723;
-  --color-dark: #1d2430;
-  --color-primary: #4a6cf7;
-  --color-yellow: #fbb040;
-  --color-bg-color-dark: #171c28;
-
-  --color-body-color: #788293;
-  --color-body-color-dark: #959cb1;
-
-  --color-stroke-stroke: #e3e8ef;
-  --color-stroke-dark: #353943;
-
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-200: #e5e7eb;
-  --color-gray-300: #d1d5db;
-  --color-gray-400: #9ca3af;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1f2937;
-  --color-gray-900: #111827;
-  --color-gray-950: #030712;
-  --color-gray-dark: #1e232e;
-  --color-gray-light: #f0f2f9;
-
-  --shadow-sign-up: 0px 5px 10px rgba(4, 10, 34, 0.2);
-  --shadow-one: 0px 2px 3px rgba(7, 7, 77, 0.05);
-  --shadow-two: 0px 5px 10px rgba(6, 8, 15, 0.1);
-  --shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
-  --shadow-sticky: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  --shadow-sticky-dark: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
-  --shadow-feature-2: 0px 10px 40px rgba(48, 86, 211, 0.12);
-  --shadow-submit: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-submit-dark: 0px 5px 20px rgba(4, 10, 34, 0.1);
-  --shadow-btn: 0px 1px 2px rgba(4, 10, 34, 0.15);
-  --shadow-btn-hover: 0px 1px 2px rgba(0, 0, 0, 0.15);
-  --shadow-btn-light: 0px 1px 2px rgba(0, 0, 0, 0.1);
-
-  --drop-shadow-three: 0px 5px 15px rgba(6, 8, 15, 0.05);
+.container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+.sticky .header-logo{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
+@media (min-width: 1024px){
 
-@utility container {
-  margin-inline: auto;
-  padding-inline: 1rem;
+  .sticky .header-logo{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+.sticky .menu-scroll.active{
+  opacity: 0.7;
+}
+input#checkboxLabel:checked ~ .box span{
+  opacity: 1;
 }
 
 /*
@@ -1463,70 +1535,40 @@ input[type="checkbox"]:checked ~ label span svg{
   color utility to any element that depends on these defaults.
 */
 
-@utility sticky {
-  & .header-logo{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-  @media (min-width: 1024px){
-
-    & .header-logo{
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-  }
-
-  & .menu-scroll.active{
-    opacity: 0.7;
-  }
-}
-
-@utility header-logo {
-  .sticky &{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-  @media (min-width: 1024px){
-
-    .sticky &{
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-  }
-}
-
-@utility menu-scroll {
-  .sticky &.active{
-    opacity: 0.7;
-  }
-}
-
-@utility active {
-  .sticky &.menu-scroll{
-    opacity: 0.7;
-  }
-}
-
-@utility dot {
-  input#togglePlan:checked ~ &{
-    --tw-translate-x: 100%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-}
-
-@utility box {
-  input#checkboxLabel:checked ~ & span{
-    opacity: 1;
-  }
+.hover\:border-primary:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(74 108 247 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-black\/90:hover{
-  background-color: rgb(0 0 0 / 0.9);
+  background-color: rgb(18 23 35 / 0.9);
+}
+
+.hover\:bg-primary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 108 247 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-primary\/5:hover{
+  background-color: rgb(74 108 247 / 0.05);
+}
+
+.hover\:bg-primary\/80:hover{
+  background-color: rgb(74 108 247 / 0.8);
+}
+
+.hover\:bg-primary\/90:hover{
+  background-color: rgb(74 108 247 / 0.9);
 }
 
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-primary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(74 108 247 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-white:hover{
@@ -1546,10 +1588,38 @@ input[type="checkbox"]:checked ~ label span svg{
   opacity: 0.7;
 }
 
+.hover\:shadow-btn-hover:hover{
+  --tw-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  --tw-shadow-colored: 0px 1px 2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-one:hover{
+  --tw-shadow: 0px 2px 3px rgba(7, 7, 77, 0.05);
+  --tw-shadow-colored: 0px 2px 3px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-two:hover{
+  --tw-shadow: 0px 5px 10px rgba(6, 8, 15, 0.1);
+  --tw-shadow-colored: 0px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:border-primary:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(74 108 247 / var(--tw-border-opacity, 1));
+}
+
 .focus\:ring-2:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.group:hover .group-hover\:text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(74 108 247 / var(--tw-text-opacity, 1));
 }
 
 .group:hover .group-hover\:opacity-100{
@@ -1562,6 +1632,10 @@ input[type="checkbox"]:checked ~ label span svg{
 
 .dark\:hidden:is(.dark *){
   display: none;
+}
+
+.dark\:border-body-color\/20:is(.dark *){
+  border-color: rgb(120 130 147 / 0.2);
 }
 
 .dark\:border-transparent:is(.dark *){
@@ -1585,9 +1659,24 @@ input[type="checkbox"]:checked ~ label span svg{
   background-color: rgb(44 48 59 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:bg-bg-color-dark:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 28 40 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:bg-black:is(.dark *){
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  background-color: rgb(18 23 35 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-dark:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 36 48 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-gray-dark:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 35 46 / var(--tw-bg-opacity, 1));
 }
 
 .dark\:bg-white:is(.dark *){
@@ -1602,6 +1691,11 @@ input[type="checkbox"]:checked ~ label span svg{
 .dark\:via-\[\#959CB183\]:is(.dark *){
   --tw-gradient-to: rgb(149 156 177 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #959CB183 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.dark\:text-body-color-dark:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(149 156 177 / var(--tw-text-opacity, 1));
 }
 
 .dark\:text-white:is(.dark *){
@@ -1623,13 +1717,56 @@ input[type="checkbox"]:checked ~ label span svg{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.dark\:shadow-sticky-dark:is(.dark *){
+  --tw-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.1);
+  --tw-shadow-colored: inset 0 -1px 0 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark\:shadow-submit-dark:is(.dark *){
+  --tw-shadow: 0px 5px 20px rgba(4, 10, 34, 0.1);
+  --tw-shadow-colored: 0px 5px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark\:shadow-three:is(.dark *){
+  --tw-shadow: 0px 5px 15px rgba(6, 8, 15, 0.05);
+  --tw-shadow-colored: 0px 5px 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark\:shadow-two:is(.dark *){
+  --tw-shadow: 0px 5px 10px rgba(6, 8, 15, 0.1);
+  --tw-shadow-colored: 0px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .dark\:drop-shadow-none:is(.dark *){
   --tw-drop-shadow: drop-shadow(0 0 #0000);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.dark\:hover\:border-primary:hover:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(74 108 247 / var(--tw-border-opacity, 1));
+}
+
+.dark\:hover\:bg-primary:hover:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 108 247 / var(--tw-bg-opacity, 1));
+}
+
+.dark\:hover\:bg-primary\/5:hover:is(.dark *){
+  background-color: rgb(74 108 247 / 0.05);
+}
+
 .dark\:hover\:bg-white\/5:hover:is(.dark *){
   background-color: rgb(255 255 255 / 0.05);
+}
+
+.dark\:hover\:text-primary:hover:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(74 108 247 / var(--tw-text-opacity, 1));
 }
 
 .dark\:hover\:text-white:hover:is(.dark *){
@@ -1645,6 +1782,16 @@ input[type="checkbox"]:checked ~ label span svg{
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark\:hover\:shadow-gray-dark:hover:is(.dark *){
+  --tw-shadow-color: #1e232e;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.dark\:focus\:border-primary:focus:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(74 108 247 / var(--tw-border-opacity, 1));
 }
 
 .dark\:focus\:shadow-none:focus:is(.dark *){
@@ -1674,6 +1821,10 @@ input[type="checkbox"]:checked ~ label span svg{
 
   .sm\:flex{
     display: flex;
+  }
+
+  .sm\:aspect-97\/44{
+    aspect-ratio: 97 / 44;
   }
 
   .sm\:h-\[75px\]{
